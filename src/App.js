@@ -55,6 +55,7 @@ class App extends Component {
         <Search search={title => this.Search(title)} />
         <Stars rating={this.state.rating} stars={rating => this.Rating(rating)}/>
         <AddMovie addmovie={movie=>this.addNewmovie(movie)}/>
+        
         <MovieCards isLoading={this.state.loading} movieList={this.state.movieList.filter(el => el.title.toUpperCase().includes(this.state.keyword.toUpperCase().trim()) && el.rating >= this.state.rating)} />
       </div>
     );
